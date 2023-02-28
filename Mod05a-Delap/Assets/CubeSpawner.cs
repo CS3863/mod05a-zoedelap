@@ -21,9 +21,11 @@ public class CubeSpawner : MonoBehaviour
         GameObject cubeGO = Instantiate(cubePrefabVar);
         Material cubeMat = cubeGO.GetComponent<Renderer>().material;
         cubeMat.color = Random.ColorHSV(0, 1, 0.5f, 1, 0.75f, 1);
+        Object.Destroy(cubeGO, 1.5f);
 
         GameObject sphereGO = Instantiate(spherePrefabVar);
         Material sphereMat = sphereGO.GetComponent<Renderer>().material;
         sphereMat.color = Random.ColorHSV(0, 1, 0.5f, 1, 0.75f, 1);
+        Object.Destroy(sphereGO, 1.5f);
     }
 }
